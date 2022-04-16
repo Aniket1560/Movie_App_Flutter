@@ -21,9 +21,9 @@ class MovieExtraImages extends StatelessWidget {
         const HorizontalLine(),
         SizedBox(
                 height: 200,
-                child: ListView.builder(
+                child: ListView.separated(
                   scrollDirection: Axis.vertical,
-                 // separatorBuilder: (context,index) =>SizedBox(width: 8,),
+                  separatorBuilder: (context,index) =>const SizedBox(height: 8,),
                   itemCount: images.length,
                   itemBuilder:(context, index) => ClipRRect(
                    borderRadius: const BorderRadius.all(Radius.circular(10.0)),
